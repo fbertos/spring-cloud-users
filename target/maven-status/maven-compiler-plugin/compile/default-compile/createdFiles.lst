@@ -1,0 +1,5 @@
+org/fbertos/services/users/User.class
+org/fbertos/services/users/ApplicationRestService.class
+org/fbertos/services/users/MongoService.class
+org/fbertos/services/users/UserService.class
+org/fbertos/services/users/UserRepository.class

@@ -1,0 +1,12 @@
+|===
+|Path|Type|Description
+
+|`+_id+`
+|`+String+`
+|Generated id
+
+|`+name+`
+|`+String+`
+|User name
+
+|===

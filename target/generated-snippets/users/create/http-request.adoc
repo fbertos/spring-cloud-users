@@ -1,0 +1,11 @@
+[source,http,options="nowrap"]
+----
+POST /create HTTP/1.1
+Authorization: 3423fdsfddd432434dffs20018!!
+Content-Type: application/json
+Accept: application/json
+Host: localhost:8080
+Content-Length: 49
+
+{"_id":"000000000000000000000000","name":"admin"}
+----

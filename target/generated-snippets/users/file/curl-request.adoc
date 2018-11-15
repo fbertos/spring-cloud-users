@@ -1,0 +1,10 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/file' -i -X POST \
+    -H 'Content-Type: multipart/form-data' \
+    -H 'Content-Type: application/json' \
+    -H 'Authorization: 3423fdsfddd432434dffs20018!!' \
+    -H 'Accept: application/json' \
+    -F 'user={"_id":"000000000000000000000000","name":"admin"};type=application/json' \
+    -F 'file=@filename.txt;type=text/plain'
+----

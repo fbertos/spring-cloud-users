@@ -1,0 +1,9 @@
+[source,bash]
+----
+$ http --form POST 'http://localhost:8080/file' \
+    'user'@<(echo '{"_id":"000000000000000000000000","name":"admin"}') \
+    'file'@'filename.txt' \
+    'Content-Type:application/json' \
+    'Authorization:3423fdsfddd432434dffs20018!!' \
+    'Accept:application/json'
+----
