@@ -1,6 +1,5 @@
 package org.fbertos.services.users;
 
-import static org.junit.matchers.JUnitMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
@@ -8,12 +7,10 @@ import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.docu
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 
-import org.fbertos.services.users.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.test.web.servlet.MockMvc;
@@ -56,7 +53,7 @@ public class UserServiceTest {
         this.mockMvc.perform(get("/read").header("Authorization", "3423fdsfddd432434dffs20018!!"))
             .andExpect(status().isOk())
             .andDo(document("users/read",
-            		responseFields(fieldWithPath("_id").description("Generated id"),
+            		responseFields(fieldWithPath("id").description("Generated id"),
             				fieldWithPath("name").description("User name"))
             		));
     }
@@ -74,7 +71,7 @@ public class UserServiceTest {
         		.content(body))
             .andExpect(status().isOk())
             .andDo(document("users/create",
-            		responseFields(fieldWithPath("_id").description("Generated id"),
+            		responseFields(fieldWithPath("id").description("Generated id"),
             				fieldWithPath("name").description("User name"))
             		));
     }
@@ -96,7 +93,7 @@ public class UserServiceTest {
         		.accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
             .andDo(document("users/file",
-            		responseFields(fieldWithPath("_id").description("Generated id"),
+            		responseFields(fieldWithPath("id").description("Generated id"),
             				fieldWithPath("name").description("User name"))
             		));
     }

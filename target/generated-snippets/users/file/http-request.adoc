@@ -11,7 +11,7 @@ Host: localhost:8080
 Content-Disposition: form-data; name=user
 Content-Type: application/json
 
-{"_id":"000000000000000000000000","name":"admin"}
+{"id":"000000000000000000000000","name":"admin"}
 --6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Content-Disposition: form-data; name=file; filename=filename.txt
 Content-Type: text/plain
