@@ -9,7 +9,6 @@ public class MongoService {
 	private UserRepository repository;
 
 	public User save(User u) {
-		User r = repository.save(u);
-		return r;
+		return repository.save(u);
     }
 }

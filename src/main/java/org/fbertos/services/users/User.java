@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 
 public class User {
 	@Id
-	public ObjectId _id;
+	public ObjectId id;
 	  	
 	private String name;
 
@@ -13,16 +13,16 @@ public class User {
 	}
 	
 	public User(String name) {
-		this._id = new ObjectId(new byte[24]);
+		this.id = new ObjectId(new byte[24]);
 		this.name = name;
 	}
 	
-	public String get_id() { 
-		return _id.toHexString(); 
+	public String getId() { 
+		return id.toHexString(); 
 	}
 	
-	public void set_id(ObjectId _id) { 
-		this._id = _id; 
+	public void setId(ObjectId id) { 
+		this.id = id; 
 	}
 	  	
 	public String getName() {

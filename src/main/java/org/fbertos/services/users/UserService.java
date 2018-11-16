@@ -1,6 +1,8 @@
 package org.fbertos.services.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +18,15 @@ public class UserService {
 	@Autowired
 	private MongoService mongo;
 	
-	@RequestMapping(value="/read", method=RequestMethod.GET)
+	@RequestMapping(value="/read")
+	@GetMapping
     public @ResponseBody User getUser(@RequestHeader("Authorization") String ticket) {
 		String port = System.getProperty("server.port");
 		return new User("test from " + port);
     }
 	
-	@RequestMapping(value="/create", method=RequestMethod.POST)
+	@RequestMapping(value="/create")
+	@PostMapping
     public @ResponseBody User createUser(@RequestHeader("Authorization") String ticket, @RequestBody User user) {
 		if (ticket == null || !ticket.equals("3423fdsfddd432434dffs20018!!")) {
 			return null;
@@ -31,7 +35,8 @@ public class UserService {
 		return new User("test");
     }
 
-	@RequestMapping(value="/file", method=RequestMethod.POST)
+	@RequestMapping(value="/file")
+	@PostMapping
     public @ResponseBody User createUserWithFile(@RequestHeader("Authorization") String ticket, 
     		@RequestPart User user,
     		@RequestPart(value = "file", required = false) MultipartFile file) {
