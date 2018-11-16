@@ -18,20 +18,16 @@ public class UserService {
 	
 	@RequestMapping(value="/read", method=RequestMethod.GET)
     public @ResponseBody User getUser(@RequestHeader("Authorization") String ticket) {
-		//System.out.println("Ticket" + ticket);
 		String port = System.getProperty("server.port");
-		//System.out.println("Hello from " + port);
-		return new User("test");
+		return new User("test from " + port);
     }
 	
 	@RequestMapping(value="/create", method=RequestMethod.POST)
     public @ResponseBody User createUser(@RequestHeader("Authorization") String ticket, @RequestBody User user) {
 		if (ticket == null || !ticket.equals("3423fdsfddd432434dffs20018!!")) {
-			//System.out.println("Error!");
 			return null;
 		}
 		
-		//System.out.println("Hola!");
 		return new User("test");
     }
 
@@ -40,11 +36,9 @@ public class UserService {
     		@RequestPart User user,
     		@RequestPart(value = "file", required = false) MultipartFile file) {
 		if (ticket == null || !ticket.equals("3423fdsfddd432434dffs20018!!")) {
-			//System.out.println("Error!");
 			return null;
 		}
 		
-		//System.out.println("Hola!" + file.getOriginalFilename() + file.getSize());
 		return new User("test");
     }
 }
