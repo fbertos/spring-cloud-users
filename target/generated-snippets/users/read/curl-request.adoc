@@ -1,5 +1,0 @@
-[source,bash]
-----
-$ curl 'http://localhost:8080/read' -i -X GET \
-    -H 'Authorization: 3423fdsfddd432434dffs20018!!'
-----

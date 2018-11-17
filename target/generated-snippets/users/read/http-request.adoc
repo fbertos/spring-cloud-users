@@ -1,7 +1,0 @@
-[source,http,options="nowrap"]
-----
-GET /read HTTP/1.1
-Authorization: 3423fdsfddd432434dffs20018!!
-Host: localhost:8080
-
-----
