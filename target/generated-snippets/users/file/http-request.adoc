@@ -1,0 +1,21 @@
+[source,http,options="nowrap"]
+----
+POST /file HTTP/1.1
+Content-Type: multipart/form-data; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
+Content-Type: application/json; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
+Authorization: 3423fdsfddd432434dffs20018!!
+Accept: application/json
+Host: localhost:8080
+
+--6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
+Content-Disposition: form-data; name=user
+Content-Type: application/json
+
+{"id":"000000000000000000000000","name":"admin"}
+--6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
+Content-Disposition: form-data; name=file; filename=filename.txt
+Content-Type: text/plain
+
+some xml
+--6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm--
+----

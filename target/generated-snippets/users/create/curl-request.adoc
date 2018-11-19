@@ -1,0 +1,8 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/create' -i -X POST \
+    -H 'Authorization: 3423fdsfddd432434dffs20018!!' \
+    -H 'Content-Type: application/json' \
+    -H 'Accept: application/json' \
+    -d '{"id":"000000000000000000000000","name":"admin"}'
+----

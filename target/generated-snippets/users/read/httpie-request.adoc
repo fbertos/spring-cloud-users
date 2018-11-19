@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ http GET 'http://localhost:8080/read' \
+    'Authorization:3423fdsfddd432434dffs20018!!'
+----
