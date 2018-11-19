@@ -1,4 +1,0 @@
-[source,options="nowrap"]
-----
-{"id":"000000000000000000000000","name":"test from null"}
-----
